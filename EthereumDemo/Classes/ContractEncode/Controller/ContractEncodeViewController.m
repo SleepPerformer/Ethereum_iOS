@@ -12,6 +12,7 @@
 @interface ContractEncodeViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UITextField *functionTextField;
+//@property (copy, nonatomic) NSString *result;
 
 @end
 
@@ -20,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    // 合约编码方式，为，方法原型编码+参数编码
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,8 +29,16 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)encodeContract:(id)sender {
+    NSString *funcResult = [NSString string];
     EthereumEncodeManager *manager = [[EthereumEncodeManager alloc] init];
-    self.resultLabel.text = [manager encodeFunction:self.functionTextField.text];
+    funcResult = [manager encodeFunction:self.functionTextField.text];
+    // 需要进行参数编码 参数类型需要使用专门的类型进行一次封装
+    // string -> EthereumString
+    // bool -> EthereumBOOL
+    // array -> EthereumArray
+    NSArray *array = @[]; // 把封装好的参数放入array中
+    NSString *argsResult = [manager encodeArgs:array];
+    self.resultLabel.text = [NSString stringWithFormat:@"%@%@", funcResult, argsResult];
 }
 
 /*
