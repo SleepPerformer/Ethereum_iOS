@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface EthereumEncodeManager : NSObject
+
+/**
+ 对所有的参数进行编码
+
+ @param arguments 所有的参数
+ @return 参数编码结果
+ */
+- (NSString *)encodeArgs:(NSArray *)arguments;
+
 /**
  对合约方法原型进行编码
 
