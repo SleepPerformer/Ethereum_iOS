@@ -10,6 +10,7 @@
 #import "BasicInfoViewController.h"
 #import "ContractEncodeViewController.h"
 
+#import "SPBlockchainType.h"
 @interface MainViewController ()
 
 @property (nonatomic, strong) NSMutableArray *functions;
@@ -34,13 +35,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"Demo功能展示";
+    SPBlockchainType *type = [SPBlockchainType blockchainTypeWithArgument:@"array 12,23,23, 23"];
+    NSLog(@"%@", type);
 }
 
 - (void)didReceiveMemoryWarning {

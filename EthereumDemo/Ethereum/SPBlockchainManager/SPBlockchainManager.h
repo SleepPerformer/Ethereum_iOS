@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class SPContractEncoder, SPContractDecoder;
+#import "SPContractDecoder.h"
+#import "SPContractEncoder.h"
 
 @interface SPBlockchainManager : NSObject
 @property (strong, nonatomic) NSDictionary *functionsHash; // 私有应该
@@ -42,11 +42,11 @@
 /**
  获取合约编码
  
- @param funcName 合约方法名
+ @param funcCode 方法hash后的字符串
  @param arguments 已封装成专属类型的参数数组
  @return 合约编码字符串
  */
-- (NSString *)payloadWithFunction:(NSString *)funcName andArgs:(NSArray<NSString *> *)arguments;
+- (NSString *)payloadWithFunction:(NSString *)funcCode andArgs:(NSArray<NSString *> *)arguments;
 /**
  对调起合约得到的hash值进行签名
 

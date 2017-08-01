@@ -9,8 +9,6 @@
 #import "SPBlockchainManager.h"
 #import "SPSecp256k1.h"
 #import "SPBlockchainType.h"
-#import "SPContractDecoder.h"
-#import "SPContractEncoder.h"
 
 @interface SPBlockchainManager()
 /** 用户地址 */
@@ -160,8 +158,8 @@ static SPBlockchainManager *instance_ = nil;
     return payload;
 }
 
-- (NSString *)payloadWithFunction:(NSString *)funcName andArgs:(NSArray<NSString *> *)arguments {
-    __block NSString *result = [self findMethod:funcName];
+- (NSString *)payloadWithFunction:(NSString *)funcCode andArgs:(NSArray<NSString *> *)arguments {
+    __block NSString *result = funcCode;
     __block NSString *ocDynamicArgs = [[NSString alloc]init];//动态参数拼接的结果
     //按顺序遍历数组，进行参数编码，每次产生一个ret都要进行一次字符串的拼接
     char *ret = malloc(sizeof(char) * (BitsUnit + 1));//存放静态参数的编码

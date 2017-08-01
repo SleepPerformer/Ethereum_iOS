@@ -32,6 +32,7 @@
     }
     if ([type.type isEqualToString:@"array"]) {
         // 将字符串转成数组，以逗号作为区分
+        content = [content stringByReplacingOccurrencesOfString:@" " withString:@""];
         NSArray *contents = [content componentsSeparatedByString:@","];
         type.content = contents;
     } else {

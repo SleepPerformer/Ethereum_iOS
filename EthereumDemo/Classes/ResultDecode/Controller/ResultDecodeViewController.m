@@ -7,7 +7,7 @@
 //
 
 #import "ResultDecodeViewController.h"
-#import "EthereumContract.h"
+#import "SPBlockchainManager.h"
 
 @interface ResultDecodeViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *decodeContent;
@@ -27,12 +27,12 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)numberDecode:(id)sender {
-    EthereumContract *contract = [EthereumContract sharedInstance];
-    self.decodeResultLabel.text = [NSString stringWithFormat:@"%@", [contract decodeIntWithHexString:self.decodeContent.text]];
+    SPBlockchainManager *manager = [SPBlockchainManager manager];
+    self.decodeResultLabel.text = [NSString stringWithFormat:@"%@", [manager.decoder decodeIntWithHexString:self.decodeContent.text]];
 }
 - (IBAction)boolDecode:(id)sender {
-    EthereumContract *contract = [EthereumContract sharedInstance];
-    NSNumber *num = [contract decodeIntWithHexString:self.decodeContent.text];
+    SPBlockchainManager *manager = [SPBlockchainManager manager];
+    NSNumber *num = [manager.decoder decodeIntWithHexString:self.decodeContent.text];
     if ([num integerValue] == 0) {
         self.decodeResultLabel.text = @"false";
     } else {
@@ -40,12 +40,12 @@
     }
 }
 - (IBAction)stringDecode:(id)sender {
-    EthereumContract *contract = [EthereumContract sharedInstance];
-    self.decodeResultLabel.text = [NSString stringWithFormat:@"%@", [contract decodeLongWithHexString:self.decodeContent.text]];
+    SPBlockchainManager *manager = [SPBlockchainManager manager];
+    self.decodeResultLabel.text = [NSString stringWithFormat:@"%@", [manager.decoder decodeStringWithHexString:self.decodeContent.text]];
 }
 - (IBAction)arrayDecode:(id)sender {
-    EthereumContract *contract = [EthereumContract sharedInstance];
-    self.decodeResultLabel.text = [NSString stringWithFormat:@"%@", [contract decodeResult:self.decodeContent.text]];
+    SPBlockchainManager *manager = [SPBlockchainManager manager];
+    self.decodeResultLabel.text = [NSString stringWithFormat:@"%@", [manager.decoder decodeResult:self.decodeContent.text]];
 }
 
 /*

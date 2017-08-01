@@ -10,6 +10,13 @@
 /** 对合约方法进行编码 */
 @interface SPContractEncoder : NSObject
 /**
+ 对方法原型进行编码
+
+ @param function 方法原型，没有空格
+ @return hash后的前4个字节
+ */
+- (NSString *)encodeFunction:(NSString *)function;
+/**
  对int256参数进行编码
  
  @param value int256的值

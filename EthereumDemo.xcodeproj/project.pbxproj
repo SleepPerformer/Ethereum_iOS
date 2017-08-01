@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4812D8821F3099100099CCB3 /* libsecp256k1_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4812D86B1F3099100099CCB3 /* libsecp256k1_all.a */; };
+		4812D8831F3099100099CCB3 /* SPSecp256k1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812D86E1F3099100099CCB3 /* SPSecp256k1.m */; };
+		4812D8841F3099100099CCB3 /* keccak_f.c in Sources */ = {isa = PBXBuildFile; fileRef = 4812D8701F3099100099CCB3 /* keccak_f.c */; };
+		4812D8851F3099100099CCB3 /* round.c in Sources */ = {isa = PBXBuildFile; fileRef = 4812D8721F3099100099CCB3 /* round.c */; };
+		4812D8861F3099100099CCB3 /* sponge.c in Sources */ = {isa = PBXBuildFile; fileRef = 4812D8741F3099100099CCB3 /* sponge.c */; };
+		4812D8871F3099100099CCB3 /* SPBlockchainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812D8781F3099100099CCB3 /* SPBlockchainManager.m */; };
+		4812D8881F3099100099CCB3 /* SPBlockchainType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812D87B1F3099100099CCB3 /* SPBlockchainType.m */; };
+		4812D8891F3099100099CCB3 /* SPContractDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812D87E1F3099100099CCB3 /* SPContractDecoder.m */; };
+		4812D88A1F3099100099CCB3 /* SPContractEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812D8811F3099100099CCB3 /* SPContractEncoder.m */; };
 		48802EFB1F29B78800638C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802EFA1F29B78800638C35 /* main.m */; };
 		48802EFE1F29B78800638C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802EFD1F29B78800638C35 /* AppDelegate.m */; };
 		48802F041F29B78800638C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48802F021F29B78800638C35 /* Main.storyboard */; };
@@ -19,22 +28,27 @@
 		48802F5F1F29DC9E00638C35 /* ContractEncodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48802F5D1F29DC9E00638C35 /* ContractEncodeViewController.xib */; };
 		48802F641F29F11700638C35 /* ResultDecodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48802F621F29F11700638C35 /* ResultDecodeViewController.xib */; };
 		48802F671F29F31D00638C35 /* ResultDecodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802F661F29F31D00638C35 /* ResultDecodeViewController.m */; };
-		48802FB71F2B37B800638C35 /* EthereumContract.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802F991F2B37B800638C35 /* EthereumContract.m */; };
-		48802FB81F2B37B800638C35 /* EthereumDecodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802F9C1F2B37B800638C35 /* EthereumDecodeManager.m */; };
-		48802FB91F2B37B800638C35 /* EthereumResultDecode.c in Sources */ = {isa = PBXBuildFile; fileRef = 48802F9D1F2B37B800638C35 /* EthereumResultDecode.c */; };
-		48802FBA1F2B37B800638C35 /* EthereumArgEncode.c in Sources */ = {isa = PBXBuildFile; fileRef = 48802FA01F2B37B800638C35 /* EthereumArgEncode.c */; };
-		48802FBB1F2B37B800638C35 /* EthereumEncodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802FA31F2B37B800638C35 /* EthereumEncodeManager.m */; };
-		48802FBC1F2B37B800638C35 /* EthereumArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802FA61F2B37B800638C35 /* EthereumArray.m */; };
-		48802FBD1F2B37B800638C35 /* EthereumBOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802FA81F2B37B800638C35 /* EthereumBOOL.m */; };
-		48802FBE1F2B37B800638C35 /* EthereumString.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802FAA1F2B37B800638C35 /* EthereumString.m */; };
-		48802FBF1F2B37B800638C35 /* EthereumType.m in Sources */ = {isa = PBXBuildFile; fileRef = 48802FAC1F2B37B800638C35 /* EthereumType.m */; };
-		48802FC01F2B37B800638C35 /* libsecp256k1_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48802FAE1F2B37B800638C35 /* libsecp256k1_all.a */; };
-		48802FC11F2B37B800638C35 /* keccak_f.c in Sources */ = {isa = PBXBuildFile; fileRef = 48802FB11F2B37B800638C35 /* keccak_f.c */; };
-		48802FC21F2B37B800638C35 /* round.c in Sources */ = {isa = PBXBuildFile; fileRef = 48802FB31F2B37B800638C35 /* round.c */; };
-		48802FC31F2B37B800638C35 /* sponge.c in Sources */ = {isa = PBXBuildFile; fileRef = 48802FB51F2B37B800638C35 /* sponge.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4812D86B1F3099100099CCB3 /* libsecp256k1_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsecp256k1_all.a; sourceTree = "<group>"; };
+		4812D86C1F3099100099CCB3 /* secp256k1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secp256k1.h; sourceTree = "<group>"; };
+		4812D86D1F3099100099CCB3 /* SPSecp256k1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSecp256k1.h; sourceTree = "<group>"; };
+		4812D86E1F3099100099CCB3 /* SPSecp256k1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSecp256k1.m; sourceTree = "<group>"; };
+		4812D8701F3099100099CCB3 /* keccak_f.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak_f.c; sourceTree = "<group>"; };
+		4812D8711F3099100099CCB3 /* keccak_f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak_f.h; sourceTree = "<group>"; };
+		4812D8721F3099100099CCB3 /* round.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = round.c; sourceTree = "<group>"; };
+		4812D8731F3099100099CCB3 /* round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = round.h; sourceTree = "<group>"; };
+		4812D8741F3099100099CCB3 /* sponge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sponge.c; sourceTree = "<group>"; };
+		4812D8751F3099100099CCB3 /* sponge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sponge.h; sourceTree = "<group>"; };
+		4812D8771F3099100099CCB3 /* SPBlockchainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBlockchainManager.h; sourceTree = "<group>"; };
+		4812D8781F3099100099CCB3 /* SPBlockchainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBlockchainManager.m; sourceTree = "<group>"; };
+		4812D87A1F3099100099CCB3 /* SPBlockchainType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBlockchainType.h; sourceTree = "<group>"; };
+		4812D87B1F3099100099CCB3 /* SPBlockchainType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBlockchainType.m; sourceTree = "<group>"; };
+		4812D87D1F3099100099CCB3 /* SPContractDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPContractDecoder.h; sourceTree = "<group>"; };
+		4812D87E1F3099100099CCB3 /* SPContractDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPContractDecoder.m; sourceTree = "<group>"; };
+		4812D8801F3099100099CCB3 /* SPContractEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPContractEncoder.h; sourceTree = "<group>"; };
+		4812D8811F3099100099CCB3 /* SPContractEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPContractEncoder.m; sourceTree = "<group>"; };
 		48802EF61F29B78800638C35 /* EthereumDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthereumDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48802EFA1F29B78800638C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48802EFC1F29B78800638C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,32 +68,6 @@
 		48802F621F29F11700638C35 /* ResultDecodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultDecodeViewController.xib; sourceTree = "<group>"; };
 		48802F651F29F31D00638C35 /* ResultDecodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultDecodeViewController.h; sourceTree = "<group>"; };
 		48802F661F29F31D00638C35 /* ResultDecodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultDecodeViewController.m; sourceTree = "<group>"; };
-		48802F981F2B37B800638C35 /* EthereumContract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumContract.h; sourceTree = "<group>"; };
-		48802F991F2B37B800638C35 /* EthereumContract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthereumContract.m; sourceTree = "<group>"; };
-		48802F9B1F2B37B800638C35 /* EthereumDecodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumDecodeManager.h; sourceTree = "<group>"; };
-		48802F9C1F2B37B800638C35 /* EthereumDecodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthereumDecodeManager.m; sourceTree = "<group>"; };
-		48802F9D1F2B37B800638C35 /* EthereumResultDecode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EthereumResultDecode.c; sourceTree = "<group>"; };
-		48802F9E1F2B37B800638C35 /* EthereumResultDecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumResultDecode.h; sourceTree = "<group>"; };
-		48802FA01F2B37B800638C35 /* EthereumArgEncode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EthereumArgEncode.c; sourceTree = "<group>"; };
-		48802FA11F2B37B800638C35 /* EthereumArgEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumArgEncode.h; sourceTree = "<group>"; };
-		48802FA21F2B37B800638C35 /* EthereumEncodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumEncodeManager.h; sourceTree = "<group>"; };
-		48802FA31F2B37B800638C35 /* EthereumEncodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthereumEncodeManager.m; sourceTree = "<group>"; };
-		48802FA51F2B37B800638C35 /* EthereumArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumArray.h; sourceTree = "<group>"; };
-		48802FA61F2B37B800638C35 /* EthereumArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthereumArray.m; sourceTree = "<group>"; };
-		48802FA71F2B37B800638C35 /* EthereumBOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumBOOL.h; sourceTree = "<group>"; };
-		48802FA81F2B37B800638C35 /* EthereumBOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthereumBOOL.m; sourceTree = "<group>"; };
-		48802FA91F2B37B800638C35 /* EthereumString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumString.h; sourceTree = "<group>"; };
-		48802FAA1F2B37B800638C35 /* EthereumString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthereumString.m; sourceTree = "<group>"; };
-		48802FAB1F2B37B800638C35 /* EthereumType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthereumType.h; sourceTree = "<group>"; };
-		48802FAC1F2B37B800638C35 /* EthereumType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthereumType.m; sourceTree = "<group>"; };
-		48802FAE1F2B37B800638C35 /* libsecp256k1_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsecp256k1_all.a; sourceTree = "<group>"; };
-		48802FAF1F2B37B800638C35 /* secp256k1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secp256k1.h; sourceTree = "<group>"; };
-		48802FB11F2B37B800638C35 /* keccak_f.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak_f.c; sourceTree = "<group>"; };
-		48802FB21F2B37B800638C35 /* keccak_f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak_f.h; sourceTree = "<group>"; };
-		48802FB31F2B37B800638C35 /* round.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = round.c; sourceTree = "<group>"; };
-		48802FB41F2B37B800638C35 /* round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = round.h; sourceTree = "<group>"; };
-		48802FB51F2B37B800638C35 /* sponge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sponge.c; sourceTree = "<group>"; };
-		48802FB61F2B37B800638C35 /* sponge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sponge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +75,86 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48802FC01F2B37B800638C35 /* libsecp256k1_all.a in Frameworks */,
+				4812D8821F3099100099CCB3 /* libsecp256k1_all.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4812D8691F3099100099CCB3 /* Ethereum */ = {
+			isa = PBXGroup;
+			children = (
+				4812D86A1F3099100099CCB3 /* secp256k1 */,
+				4812D86F1F3099100099CCB3 /* sha3-256 */,
+				4812D8761F3099100099CCB3 /* SPBlockchainManager */,
+				4812D8791F3099100099CCB3 /* SPBlockchainType */,
+				4812D87C1F3099100099CCB3 /* SPContractDecoder */,
+				4812D87F1F3099100099CCB3 /* SPContractEncoder */,
+			);
+			path = Ethereum;
+			sourceTree = "<group>";
+		};
+		4812D86A1F3099100099CCB3 /* secp256k1 */ = {
+			isa = PBXGroup;
+			children = (
+				4812D86B1F3099100099CCB3 /* libsecp256k1_all.a */,
+				4812D86C1F3099100099CCB3 /* secp256k1.h */,
+				4812D86D1F3099100099CCB3 /* SPSecp256k1.h */,
+				4812D86E1F3099100099CCB3 /* SPSecp256k1.m */,
+			);
+			path = secp256k1;
+			sourceTree = "<group>";
+		};
+		4812D86F1F3099100099CCB3 /* sha3-256 */ = {
+			isa = PBXGroup;
+			children = (
+				4812D8701F3099100099CCB3 /* keccak_f.c */,
+				4812D8711F3099100099CCB3 /* keccak_f.h */,
+				4812D8721F3099100099CCB3 /* round.c */,
+				4812D8731F3099100099CCB3 /* round.h */,
+				4812D8741F3099100099CCB3 /* sponge.c */,
+				4812D8751F3099100099CCB3 /* sponge.h */,
+			);
+			path = "sha3-256";
+			sourceTree = "<group>";
+		};
+		4812D8761F3099100099CCB3 /* SPBlockchainManager */ = {
+			isa = PBXGroup;
+			children = (
+				4812D8771F3099100099CCB3 /* SPBlockchainManager.h */,
+				4812D8781F3099100099CCB3 /* SPBlockchainManager.m */,
+			);
+			path = SPBlockchainManager;
+			sourceTree = "<group>";
+		};
+		4812D8791F3099100099CCB3 /* SPBlockchainType */ = {
+			isa = PBXGroup;
+			children = (
+				4812D87A1F3099100099CCB3 /* SPBlockchainType.h */,
+				4812D87B1F3099100099CCB3 /* SPBlockchainType.m */,
+			);
+			path = SPBlockchainType;
+			sourceTree = "<group>";
+		};
+		4812D87C1F3099100099CCB3 /* SPContractDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				4812D87D1F3099100099CCB3 /* SPContractDecoder.h */,
+				4812D87E1F3099100099CCB3 /* SPContractDecoder.m */,
+			);
+			path = SPContractDecoder;
+			sourceTree = "<group>";
+		};
+		4812D87F1F3099100099CCB3 /* SPContractEncoder */ = {
+			isa = PBXGroup;
+			children = (
+				4812D8801F3099100099CCB3 /* SPContractEncoder.h */,
+				4812D8811F3099100099CCB3 /* SPContractEncoder.m */,
+			);
+			path = SPContractEncoder;
+			sourceTree = "<group>";
+		};
 		48802EED1F29B78800638C35 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +174,7 @@
 		48802EF81F29B78800638C35 /* EthereumDemo */ = {
 			isa = PBXGroup;
 			children = (
-				48802F961F2B37B800638C35 /* Ethereum */,
+				4812D8691F3099100099CCB3 /* Ethereum */,
 				48802F441F29CA1300638C35 /* Classes */,
 				48802EFC1F29B78800638C35 /* AppDelegate.h */,
 				48802EFD1F29B78800638C35 /* AppDelegate.m */,
@@ -232,87 +293,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		48802F961F2B37B800638C35 /* Ethereum */ = {
-			isa = PBXGroup;
-			children = (
-				48802F971F2B37B800638C35 /* EthereumContract */,
-				48802F9A1F2B37B800638C35 /* EthereumDecodeManager */,
-				48802F9F1F2B37B800638C35 /* EthereumEncodeManager */,
-				48802FA41F2B37B800638C35 /* EthereumType */,
-				48802FAD1F2B37B800638C35 /* secp256k1 */,
-				48802FB01F2B37B800638C35 /* sha3-256 */,
-			);
-			path = Ethereum;
-			sourceTree = SOURCE_ROOT;
-		};
-		48802F971F2B37B800638C35 /* EthereumContract */ = {
-			isa = PBXGroup;
-			children = (
-				48802F981F2B37B800638C35 /* EthereumContract.h */,
-				48802F991F2B37B800638C35 /* EthereumContract.m */,
-			);
-			path = EthereumContract;
-			sourceTree = "<group>";
-		};
-		48802F9A1F2B37B800638C35 /* EthereumDecodeManager */ = {
-			isa = PBXGroup;
-			children = (
-				48802F9B1F2B37B800638C35 /* EthereumDecodeManager.h */,
-				48802F9C1F2B37B800638C35 /* EthereumDecodeManager.m */,
-				48802F9D1F2B37B800638C35 /* EthereumResultDecode.c */,
-				48802F9E1F2B37B800638C35 /* EthereumResultDecode.h */,
-			);
-			path = EthereumDecodeManager;
-			sourceTree = "<group>";
-		};
-		48802F9F1F2B37B800638C35 /* EthereumEncodeManager */ = {
-			isa = PBXGroup;
-			children = (
-				48802FA01F2B37B800638C35 /* EthereumArgEncode.c */,
-				48802FA11F2B37B800638C35 /* EthereumArgEncode.h */,
-				48802FA21F2B37B800638C35 /* EthereumEncodeManager.h */,
-				48802FA31F2B37B800638C35 /* EthereumEncodeManager.m */,
-			);
-			path = EthereumEncodeManager;
-			sourceTree = "<group>";
-		};
-		48802FA41F2B37B800638C35 /* EthereumType */ = {
-			isa = PBXGroup;
-			children = (
-				48802FA51F2B37B800638C35 /* EthereumArray.h */,
-				48802FA61F2B37B800638C35 /* EthereumArray.m */,
-				48802FA71F2B37B800638C35 /* EthereumBOOL.h */,
-				48802FA81F2B37B800638C35 /* EthereumBOOL.m */,
-				48802FA91F2B37B800638C35 /* EthereumString.h */,
-				48802FAA1F2B37B800638C35 /* EthereumString.m */,
-				48802FAB1F2B37B800638C35 /* EthereumType.h */,
-				48802FAC1F2B37B800638C35 /* EthereumType.m */,
-			);
-			path = EthereumType;
-			sourceTree = "<group>";
-		};
-		48802FAD1F2B37B800638C35 /* secp256k1 */ = {
-			isa = PBXGroup;
-			children = (
-				48802FAE1F2B37B800638C35 /* libsecp256k1_all.a */,
-				48802FAF1F2B37B800638C35 /* secp256k1.h */,
-			);
-			path = secp256k1;
-			sourceTree = "<group>";
-		};
-		48802FB01F2B37B800638C35 /* sha3-256 */ = {
-			isa = PBXGroup;
-			children = (
-				48802FB11F2B37B800638C35 /* keccak_f.c */,
-				48802FB21F2B37B800638C35 /* keccak_f.h */,
-				48802FB31F2B37B800638C35 /* round.c */,
-				48802FB41F2B37B800638C35 /* round.h */,
-				48802FB51F2B37B800638C35 /* sponge.c */,
-				48802FB61F2B37B800638C35 /* sponge.h */,
-			);
-			path = "sha3-256";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,23 +368,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48802FB81F2B37B800638C35 /* EthereumDecodeManager.m in Sources */,
-				48802FBA1F2B37B800638C35 /* EthereumArgEncode.c in Sources */,
-				48802FC11F2B37B800638C35 /* keccak_f.c in Sources */,
+				4812D8881F3099100099CCB3 /* SPBlockchainType.m in Sources */,
+				4812D8891F3099100099CCB3 /* SPContractDecoder.m in Sources */,
 				48802F541F29CB8C00638C35 /* BasicInfoViewController.m in Sources */,
-				48802FBF1F2B37B800638C35 /* EthereumType.m in Sources */,
+				4812D88A1F3099100099CCB3 /* SPContractEncoder.m in Sources */,
+				4812D8861F3099100099CCB3 /* sponge.c in Sources */,
 				48802F5E1F29DC9E00638C35 /* ContractEncodeViewController.m in Sources */,
+				4812D8841F3099100099CCB3 /* keccak_f.c in Sources */,
+				4812D8851F3099100099CCB3 /* round.c in Sources */,
 				48802EFE1F29B78800638C35 /* AppDelegate.m in Sources */,
-				48802FC31F2B37B800638C35 /* sponge.c in Sources */,
-				48802FBB1F2B37B800638C35 /* EthereumEncodeManager.m in Sources */,
+				4812D8871F3099100099CCB3 /* SPBlockchainManager.m in Sources */,
 				48802F671F29F31D00638C35 /* ResultDecodeViewController.m in Sources */,
-				48802FB71F2B37B800638C35 /* EthereumContract.m in Sources */,
-				48802FBC1F2B37B800638C35 /* EthereumArray.m in Sources */,
-				48802FBD1F2B37B800638C35 /* EthereumBOOL.m in Sources */,
 				48802EFB1F29B78800638C35 /* main.m in Sources */,
-				48802FC21F2B37B800638C35 /* round.c in Sources */,
-				48802FBE1F2B37B800638C35 /* EthereumString.m in Sources */,
-				48802FB91F2B37B800638C35 /* EthereumResultDecode.c in Sources */,
+				4812D8831F3099100099CCB3 /* SPSecp256k1.m in Sources */,
 				48802F431F29C3CC00638C35 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

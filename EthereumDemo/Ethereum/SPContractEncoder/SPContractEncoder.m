@@ -7,6 +7,7 @@
 //
 
 #import "SPContractEncoder.h"
+#import "SPSecp256k1.h"
 
 @implementation SPContractEncoder
 #pragma mark - C_Methods
@@ -58,8 +59,8 @@ void encodeInt256(int value, char ret[]) {
     }
     tem[i] = '\0';
     convertString(tem, (int)strlen(tem));
-    memcpy(ret, tem, strlen(tem));
-    ret[i] = '\0';
+//    memcpy(ret, tem, strlen(tem));
+    strcpy(ret, tem);
 }
 void encodeUint256(int value, char ret[]) {
     //32个字节，64+1个位置
@@ -76,11 +77,10 @@ void encodeUint256(int value, char ret[]) {
     }
     tem[i] = '\0';
     convertString(tem, (int)strlen(tem));
-    memcpy(ret, tem, strlen(tem));
-    ret[i] = '\0';
+    strcpy(ret, tem);
 }
-#define TRUEPAYLOAD "0000000000000000000000000000000000000000000000000000000000000001\0"
-#define FALSEPAYLOAD "0000000000000000000000000000000000000000000000000000000000000000\0"
+#define TRUEPAYLOAD "0000000000000000000000000000000000000000000000000000000000000001"
+#define FALSEPAYLOAD "0000000000000000000000000000000000000000000000000000000000000000"
 void encodeBool(char *_bool, char ret[]) {
     char tem[65];
     if (!strcmp(_bool, "true")) {
@@ -88,9 +88,23 @@ void encodeBool(char *_bool, char ret[]) {
     } else{
         strcpy(tem, FALSEPAYLOAD);
     }
-    memcpy(ret, tem, strlen(tem));
+    strcpy(ret, tem);
 }
 #pragma mark - Encode
+#pragma mark - function
+
+- (NSString *)encodeFunction:(NSString *)function {
+    NSString *encodeFunStr = @"0x";
+    uint8_t *newmessage = (uint8_t *)malloc(sizeof(uint8_t) * 200); // 这里大小随意写的
+    int32_t size = (int)strlen([function UTF8String]);;
+    int32_t *psize = &size;
+    newmessage = sponge((uint8_t *)[function UTF8String], *psize);
+    for (int32_t i = 0; i < 4; i++) {
+        encodeFunStr = [NSString stringWithFormat:@"%@%.2x", encodeFunStr, *(newmessage+i)];
+    }
+    return encodeFunStr;
+}
+#pragma mark - 整形
 - (NSString *)encodeInt256:(int)value resultString:(NSString *)result {
     char *ret = malloc(sizeof(char) * 65);
     encodeInt256(value, ret);
@@ -98,7 +112,7 @@ void encodeBool(char *_bool, char ret[]) {
     free(ret);
     return [NSString stringWithFormat:@"%@%@", result, string];
 }
-
+#pragma mark - bool
 - (NSString *)encodeBool:(NSString *)boolValue resultString:(NSString *)result {
     char *ret = malloc(sizeof(char) * 65);
     if ([boolValue isEqualToString:@"YES"]) {
@@ -135,6 +149,7 @@ void encodeBool(char *_bool, char ret[]) {
     int stringLength = (int)strlen(test);
     encodeInt256(stringLength, dynamicArgs);
     dynamicString = [NSString stringWithFormat:@"%@%s",dynamicString,dynamicArgs];
+    NSLog(@"%ld", dynamicString.length);
     free(dynamicArgs);
     //内容编码
     NSData *myD = [stringValue dataUsingEncoding:NSUTF8StringEncoding];
@@ -163,6 +178,7 @@ void encodeBool(char *_bool, char ret[]) {
     int val;
     return[scan scanInt:&val] && [scan isAtEnd];
 }
+#pragma mark - array
 - (NSString *)encodeArray:(NSArray <NSString *> *)array dynamicString:(NSString *)dynamicString {
     //长度编码
     char *dynamicArgs = malloc(sizeof(char) * 65);//申请可以存放20个32字节的内容

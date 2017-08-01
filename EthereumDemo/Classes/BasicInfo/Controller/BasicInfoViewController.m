@@ -7,7 +7,7 @@
 //
 
 #import "BasicInfoViewController.h"
-#import "EthereumContract.h"
+#import "SPBlockchainManager.h"
 
 @interface BasicInfoViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
@@ -27,9 +27,9 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)createPrivateKey:(id)sender {
-    EthereumContract *contract = [EthereumContract createBasicInfo];
-    self.addressLabel.text = contract.from;
-    self.privateKeyLabel.text = contract.privateKey;
+    SPBlockchainManager *manager = [SPBlockchainManager createBasicInfo];
+    self.addressLabel.text = manager.from;
+    self.privateKeyLabel.text = manager.privateKey;
 }
 
 /*
